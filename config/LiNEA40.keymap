@@ -57,7 +57,7 @@
         layers = <SCROLL CURSOR>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,
+            //スクロール方向を逆転,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -124,9 +124,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E               &kp R                      &kp T                                                          &kp Y                     &kp U  &kp I            &kp O      &kp P
-&kp A             &kp S         &kp D               &kp F                      &kp G                                                          &kp H                     &kp J  &kp K            &kp L      &lt 5 MINUS
-&kp Z             &kp X         &kp C               &kp V                      &kp B                                                          &kp N                     &kp M  &kp COMMA        &kp DOT    &kp ENTER
-&mt LEFT_ALT ESC  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mt LEFT_CONTROL LEFT_ALT  &lt 3 INT_MUHENKAN  &lt 4 SPACE    &mt LEFT_CONTROL BACKSPACE  &mt BACKSPACE INT_HENKAN         &lt 6 BACKSLASH  &kp SLASH  &mt RIGHT_SHIFT INT_RO
+&kp A             &kp S         &kp D               &kp F                      &kp G                                                          &kp H                     &kp J  &kp K            &kp L      &kp ENTER
+&kp Z             &kp X         &kp C               &kp V                      &kp B                                                          &kp N                     &kp M  &kp COMMA        &kp DOT    &lt 5 MINUS
+&mt LEFT_ALT ESC  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mt LEFT_CONTROL LEFT_ALT  &lt 3 INT_MUHENKAN  &lt 4 SPACE    &mt LEFT_CONTROL BACKSPACE  &mt BACKSPACE INT_HENKAN         &lt 6 BACKSLASH  &kp SLASH  &mt RIGHT_SHIFT RS(INT_RO)
             >;
 
             sensor-bindings = <&re_kp TAB RS(TAB)>;
@@ -162,10 +162,10 @@
 
         CURSOR {
             bindings = <
-&kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)     &kp LG(RIGHT)    &kp LG(LS(S))                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&kp LEFT      &kp DOWN      &kp UP         &kp RIGHT_ARROW  &kp F2                              &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp PG_DN     &kp PG_UP     &kp LC(PG_UP)  &kp LC(PG_DN)    &trans                              &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&kp LA(F4)    &kp HOME      &trans         &trans           &trans         &trans    &kp ENTER  &kp NUMBER_0                   &kp DOT       &kp ENTER     &kp QUESTION
+&kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)     &kp LG(RIGHT)    &kp LG(LS(S))                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9  &kp KP_PLUS
+&kp LEFT      &kp DOWN      &kp UP         &kp RIGHT_ARROW  &kp F2                              &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5     &kp NUMBER_6  &kp INT_RO
+&kp PG_DN     &kp PG_UP     &kp LC(PG_UP)  &kp LC(PG_DN)    &trans                              &kp UNDER        &kp NUMBER_1  &kp EXCLAMATION  &kp QUESTION  &kp LEFT_BRACKET
+&kp LA(F4)    &kp HOME      &trans         &trans           &trans         &trans    &kp ENTER  &kp NUMBER_0                   &kp DOT          &kp ENTER     &kp QUESTION
             >;
         };
 
@@ -174,7 +174,7 @@
         FUNCTION {
             bindings = <
 &kp BACKSPACE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &trans      &kp F7  &kp F8  &kp F9  &kp LC(LA(DELETE))
-&kp ENTER      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                           &trans      &kp F4  &kp F5  &kp F6  &kp LC(LS(ESCAPE))
+&kp ENTER      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS                        &trans      &kp F4  &kp F5  &kp F6  &kp LC(LS(ESCAPE))
 &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY                    &kp C_MUTE  &kp F1  &kp F2  &kp F3  &kp LC(LA(INS))
 &kp PERIOD     &kp COMMA     &trans        &trans        &trans           &trans    &trans  &trans              &trans  &trans  &trans
             >;
